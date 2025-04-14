@@ -1,0 +1,19 @@
+{
+    "videos": [
+        {
+            "title": "Chill Vid 1",
+            "link": "https://www.youtube.com/watch?v=KNMbDIKJ6T0&t=5110s&ab_channel=SamandChill",
+            "description": "Chill Vid 1 Desc"
+        },
+        {
+            "title": "Chill Vid 2",
+            "link": "https://www.youtube.com/watch?v=15bZlN0LrFg&ab_channel=Vapid",
+            "description": "Chill Vid 2 Desc"
+        },
+        {
+            "title": "Chill Vid 3",
+            "link": "https://www.youtube.com/watch?v=WBLTQYl_dXQ&ab_channel=cosmic",
+            "description": "Chill Vid 3 Desc"
+        }   
+    ]
+}
