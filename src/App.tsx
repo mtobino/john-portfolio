@@ -8,16 +8,20 @@ import './App.css'
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/gallery/animations" element={<Animation />} />
-        <Route path="/gallery/art" element={<Art />} />
-        <Route path="*" element={<Error/>}/>
-      </Routes>
-      <Footer/>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/gallery/animations" element={<Animation />} />
+            <Route path="/gallery/art" element={<Art />} />
+            <Route path="*" element={<Error/>}/>
+          </Routes>
+        </main>
+        <Footer/>
+      </div>
     </BrowserRouter>
   )
 }

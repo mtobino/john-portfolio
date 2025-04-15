@@ -24,4 +24,6 @@ package-lock.json
 *.sln
 *.sw?
 
+# Temp for j logos
+public/j*.png
 

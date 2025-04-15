@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Navbar = () => {
   const [isGalleryOpen, setIsGalleryOpen] = useState<Boolean>(false);
+  const navigate = useNavigate()
 
   return (
     <nav className="bg-gray-800 shadow-lg sticky">
@@ -22,6 +23,7 @@ const Navbar = () => {
               <button
                 onMouseEnter={() => setIsGalleryOpen(true)}
                 onMouseLeave={() => setIsGalleryOpen(false)}
+                onClick={() => navigate('/gallery')}
                 className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors inline-flex items-center"
               >
                 <span>Gallery</span>
@@ -48,12 +50,6 @@ const Navbar = () => {
               >
                 <div className="rounded-md bg-white ring-1 ring-black ring-opacity-5">
                   <div className="py-1">
-                    <Link
-                      to="/gallery"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Gallery Home
-                    </Link>
                     <Link
                       to="/gallery/animations"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"

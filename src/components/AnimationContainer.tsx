@@ -1,32 +1,86 @@
-import YouTube, { YouTubeProps } from "react-youtube"
+import { useState } from "react";
+import YoutubeVideo from "./YoutubeVideo";
 
 interface AnimationContainerProps {
   video: string;
   title: string;
   description: string;
+  viewMode: 'grid' | 'list';
 }
 
-const AnimationContainer = ({ video, title, description }: AnimationContainerProps) => {
-  const opts: YouTubeProps['opts'] = {
-    height: '390',
-    width: '640',
-    playerVars: {
-      autoplay: 0
+const AnimationContainer = ({ video, title, description, viewMode }: AnimationContainerProps) => {
+  const [isError, setIsError] = useState(false);
+
+  function extractVideoId(video_link: string): string {
+    try {
+      const url = new URL(video_link);
+      return url.searchParams.get('v') || url.pathname.split('/').pop() || '';
+    } catch (error) {
+      console.warn('Invalid URL:', video_link);
+      return '';
     }
   }
 
-  function extractVideoId(video_link: string): string {
-    const url = new URL(video_link);
-    return url.searchParams.get('v') || url.pathname.split('/').pop() || '';
+  const videoId = extractVideoId(video);
+
+  if (!videoId) {
+    return (
+      <div className="bg-red-50 p-4 rounded-lg">
+        <p className="text-red-600">Invalid video URL</p>
+      </div>
+    );
   }
 
   return (
-    <div className="max-w-2xl mx-auto mb-8 p-4 bg-gray-50 rounded-lg shadow-md">
-      <h2 className="text-xl font-bold mb-2">{title}</h2>
-      <YouTube videoId={extractVideoId(video)} opts={opts} className="mb-4"/>
-      <p className="text-gray-700">{description}</p>
+    <div className={`
+      bg-white rounded-lg shadow-md overflow-hidden
+      ${viewMode === 'grid' ? 'h-full' : ''}
+    `}>
+      <div className={`
+        ${viewMode === 'grid' 
+          ? 'block' 
+          : 'flex flex-col md:flex-row md:items-start'
+        }
+      `}>
+        <div className={`
+          ${viewMode === 'grid' 
+            ? 'w-full' 
+            : 'md:w-2/3'
+          }
+        `}>
+          {isError ? (
+            <div className="bg-red-50 p-4 text-center">
+              <p className="text-red-600">Failed to load video</p>
+              <a 
+                href={`https://www.youtube.com/watch?v=${videoId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline mt-2 inline-block"
+              >
+                Watch on YouTube
+              </a>
+            </div>
+          ) : (
+            <YoutubeVideo
+              videoId={videoId}
+              title={title}
+              height={viewMode === 'grid' ? '240' : '390'}
+            />
+          )}
+        </div>
+        <div className={`
+          p-4
+          ${viewMode === 'grid' 
+            ? '' 
+            : 'md:w-1/3'
+          }
+        `}>
+          <h2 className="text-xl font-bold mb-2">{title}</h2>
+          <p className="text-gray-600">{description}</p>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default AnimationContainer;
