@@ -1,9 +1,28 @@
 {
     "art":[
         {
-            "title":"",
-            "link":"",
-            "description": ""
+            "title":"The Chad",
+            "link":"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/01bcb63e-5da9-4d99-a474-6419c8446931/djj0qhp-c2471138-71dc-459b-a053-07dad5dde1d3.jpg/v1/fit/w_718,h_718,q_70,strp/chad_by_karramellkarnchan_djj0qhp-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzE4IiwicGF0aCI6IlwvZlwvMDFiY2I2M2UtNWRhOS00ZDk5LWE0NzQtNjQxOWM4NDQ2OTMxXC9kamowcWhwLWMyNDcxMTM4LTcxZGMtNDU5Yi1hMDUzLTA3ZGFkNWRkZTFkMy5qcGciLCJ3aWR0aCI6Ijw9NzE4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.b0Vj3xcSz_RrAuNQ7T47IvMeCti8UBmvI8pLz4j9DfE",
+            "description": "Peak Man",
+            "category": ["Manly", "Buff"]
+        },
+        {
+            "title":"Sora",
+            "link":"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/abf6cef6-11f0-43e4-b32b-33568f10dd4a/dj4kmzc-35b42613-a18e-4c89-957c-1c14dffc7709.jpg/v1/fill/w_894,h_894,q_70,strp/__ai__sora_trapped_in_the_glow_by_debesten11_dj4kmzc-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcL2FiZjZjZWY2LTExZjAtNDNlNC1iMzJiLTMzNTY4ZjEwZGQ0YVwvZGo0a216Yy0zNWI0MjYxMy1hMThlLTRjODktOTU3Yy0xYzE0ZGZmYzc3MDkuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Sjg2etUR_tnlC5mU03xTycbSxScz7Tl_I32l9jNvIiQ",
+            "description": "Peak Story",
+            "category": ["Kingdom Hearts", "Lost"]
+        },
+        {
+            "title":"Mario",
+            "link":"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8ce453d9-40c2-4cbf-bd37-6185c5cda602/djg5jsa-dbcaf6d8-1a4f-4b3b-9c5f-b541819899e8.png/v1/fill/w_1194,h_669,q_70,strp/mario_vs_bowser_by_leork_dream_djg5jsa-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhjZTQ1M2Q5LTQwYzItNGNiZi1iZDM3LTYxODVjNWNkYTYwMlwvZGpnNWpzYS1kYmNhZjZkOC0xYTRmLTRiM2ItOWM1Zi1iNTQxODE5ODk5ZTgucG5nIiwiaGVpZ2h0IjoiPD03MTgiLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS53YXRlcm1hcmsiXSwid21rIjp7InBhdGgiOiJcL3dtXC84Y2U0NTNkOS00MGMyLTRjYmYtYmQzNy02MTg1YzVjZGE2MDJcL2xlb3JrLWRyZWFtLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.lHcYO9leWP_98iQML_hF8qlNOQMGsHlACj0-97SpeN4",
+            "description": "The Peak Italian",
+            "category": ["Manly", "Italian"]
+        },
+        {
+            "title":"Luigi",
+            "link":"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8ce453d9-40c2-4cbf-bd37-6185c5cda602/djkpbio-6ccc219f-ccf5-46f1-867a-162278a63abc.png/v1/fit/w_828,h_1100,q_70,strp/luigi__by_leork_dream_djkpbio-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhjZTQ1M2Q5LTQwYzItNGNiZi1iZDM3LTYxODVjNWNkYTYwMlwvZGprcGJpby02Y2NjMjE5Zi1jY2Y1LTQ2ZjEtODY3YS0xNjIyNzhhNjNhYmMucG5nIiwiaGVpZ2h0IjoiPD0xMTk1Iiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS53YXRlcm1hcmsiXSwid21rIjp7InBhdGgiOiJcL3dtXC84Y2U0NTNkOS00MGMyLTRjYmYtYmQzNy02MTg1YzVjZGE2MDJcL2xlb3JrLWRyZWFtLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.uN6RctYlvAC9DUARNaCOodv369bZmoGoyZdja-L3CpI",
+            "description": "The Peak Italian",
+            "category": ["Goofy", "Italian"]
         }
     ]
 }
