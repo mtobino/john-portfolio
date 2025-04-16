@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import artData from '../assets/art/art-links.json';
-import { Art, ArtData } from '../types/art';
+import { Art } from '../types/art';
 
 export const useArtData = () => {
   const [isLoading, setIsLoading] = useState(true);

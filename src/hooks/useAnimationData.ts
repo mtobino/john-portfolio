@@ -1,6 +1,6 @@
-import { useMemo, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import animationData from '../assets/animation/animation-links.json';
-import { AnimationData, Video } from '../types/animation';
+import { Video } from '../types/animation';
 
 export const useAnimationData = () => {
   const [isLoading, setIsLoading] = useState(true);
