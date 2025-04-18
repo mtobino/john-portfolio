@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='john-portfolio'>
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">
