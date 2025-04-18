@@ -25,7 +25,7 @@ export const useAnimationData = () => {
   };
 
   const getVideosByCategory = (category: string): Video[] => {
-    return data.filter(video => video.category === category);
+    return data.filter(video => video.category.includes(category));
   };
 
   return {
