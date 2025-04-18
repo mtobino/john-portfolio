@@ -10,7 +10,7 @@ interface AnimationContainerProps {
 }
 
 const AnimationContainer = ({ video, title, description, categories, viewMode }: AnimationContainerProps) => {
-  const [isError, setIsError] = useState(false);
+  const [isError, _] = useState(false);
 
   function extractVideoId(video_link: string): string {
     try {

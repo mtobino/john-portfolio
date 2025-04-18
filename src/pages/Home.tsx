@@ -1,4 +1,3 @@
-import { useState } from "react";
 import HeroImage from '../assets/images/A_Hero.jpg'
 import HeroHeader from "../components/HeroHeader";
 import { Link } from "react-router-dom";

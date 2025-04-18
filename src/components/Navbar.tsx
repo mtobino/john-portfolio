@@ -1,9 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
   const [isGalleryOpen, setIsGalleryOpen] = useState<Boolean>(false);
-  const navigate = useNavigate();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

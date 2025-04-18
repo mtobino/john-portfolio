@@ -9,7 +9,6 @@ const Footer = () => {
                         <Link to={'/contact'}>
                             <h3 className="text-lg font-semibold mb-4">Contact</h3>
                         </Link>
-                        
                         <ul className="space-y-2">
                             <li>
                                 <a href="mailto:your.email@example.com" className="hover:text-gray-300">

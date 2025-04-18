@@ -106,7 +106,7 @@ const MediaGallery = ({
               : 'space-y-8'
             }
           `}>
-            {currentItems.map((item, index) => renderItem(item, viewMode))}
+            {currentItems.map((item, _) => renderItem(item, viewMode))}
           </div>
 
           {/* Loading indicator and observer target */}
