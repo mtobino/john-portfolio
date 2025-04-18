@@ -6,7 +6,10 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Contact Section */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Contact</h3>
+                        <Link to={'/contact'}>
+                            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+                        </Link>
+                        
                         <ul className="space-y-2">
                             <li>
                                 <a href="mailto:your.email@example.com" className="hover:text-gray-300">
@@ -60,7 +63,7 @@ const Footer = () => {
 
                 {/* Copyright Section */}
                 <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-center text-gray-400">
-                    <p>© {new Date().getFullYear()} John's Portfolio. All rights reserved.</p>
+                    { /** <p>© {new Date().getFullYear()} John's Portfolio. All rights reserved.</p> */ }
                 </div>
             </div>
         </footer>

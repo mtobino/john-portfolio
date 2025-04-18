@@ -1,9 +1,9 @@
-import { useArtData } from "../hooks/useArtData";
+import { useMediaData } from "../hooks/useMediaData";
 import MediaGallery from "../components/MediaGallery";
 import ArtContainer from "../components/ArtContainer";
 
 const Art = () => {
-  const { artworks, isLoading, error } = useArtData();
+  const { artworks, isLoading, error } = useMediaData();
 
   if (isLoading) {
     return <div className="text-center py-8">Loading artwork...</div>;
@@ -28,8 +28,6 @@ const Art = () => {
       )}
       title="Art Gallery"
       description="Explore my collection of artwork and illustrations."
-      getItemCategory={(artwork) => artwork.category[0]}
-      getItemTitle={(artwork) => artwork.title}
     />
   );
 };

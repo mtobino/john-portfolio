@@ -1,29 +1,26 @@
 import { useState, useEffect, useRef, ReactNode } from 'react';
 import GalleryFilters from './GalleryFilters';
+import { Media } from '../types/media';
 
-interface MediaGalleryProps<T> {
-  items: T[];
-  renderItem: (item: T, viewMode: 'grid' | 'list') => ReactNode;
+interface MediaGalleryProps {
+  items: Media[];
+  renderItem: (item: Media, viewMode: 'grid' | 'list') => ReactNode;
   itemsPerPage?: number;
   title: string;
   description?: string;
   showViewToggle?: boolean;
-  getItemCategory: (item: T) => string;
-  getItemTitle: (item: T) => string;
 }
 
-const MediaGallery = <T,>({
+const MediaGallery = ({
   items,
   renderItem,
   itemsPerPage = 4,
   title,
   description,
   showViewToggle = true,
-  getItemCategory,
-  getItemTitle
-}: MediaGalleryProps<T>) => {
+}: MediaGalleryProps) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('list');
   const [displayedItems, setDisplayedItems] = useState(itemsPerPage);
@@ -31,14 +28,15 @@ const MediaGallery = <T,>({
   
   const observerTarget = useRef<HTMLDivElement>(null);
 
-  // Get unique categories
-  const categories = ["all", ...new Set(items.map(getItemCategory))];
+  // Get unique categories from all items
+  const categories = ["all", ...new Set(items.flatMap(item => item.category))];
 
   // Filter items
   const filteredItems = items.filter(item => {
-    const matchesSearch = getItemTitle(item).toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "all" || getItemCategory(item) === selectedCategory;
-    return matchesSearch && matchesCategory;
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategories = selectedCategories.length === 0 || 
+      selectedCategories.some(cat => item.category.includes(cat));
+    return matchesSearch && matchesCategories;
   });
 
   // Get current page of items
@@ -72,7 +70,7 @@ const MediaGallery = <T,>({
   useEffect(() => {
     setDisplayedItems(itemsPerPage);
     setHasMore(true);
-  }, [searchTerm, selectedCategory, itemsPerPage]);
+  }, [searchTerm, selectedCategories, itemsPerPage]);
 
   return (
     <div className="container mx-auto p-4">
@@ -84,8 +82,8 @@ const MediaGallery = <T,>({
       <GalleryFilters
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
+        selectedCategories={selectedCategories}
+        setSelectedCategories={setSelectedCategories}
         categories={categories}
         isFiltersOpen={isFiltersOpen}
         setIsFiltersOpen={setIsFiltersOpen}

@@ -107,3 +107,4 @@ const ArtContainer = ({ title, link, description, category, viewMode }: ArtProps
 };
 
 export default ArtContainer;
+

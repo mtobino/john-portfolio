@@ -5,10 +5,11 @@ interface AnimationContainerProps {
   video: string;
   title: string;
   description: string;
+  categories: string[];
   viewMode: 'grid' | 'list';
 }
 
-const AnimationContainer = ({ video, title, description, viewMode }: AnimationContainerProps) => {
+const AnimationContainer = ({ video, title, description, categories, viewMode }: AnimationContainerProps) => {
   const [isError, setIsError] = useState(false);
 
   function extractVideoId(video_link: string): string {
@@ -76,7 +77,19 @@ const AnimationContainer = ({ video, title, description, viewMode }: AnimationCo
           }
         `}>
           <h2 className="text-xl font-bold mb-2">{title}</h2>
-          <p className="text-gray-600">{description}</p>
+          <p className="text-gray-600 mb-4">{description}</p>
+          
+          {/* Categories */}
+          <div className="flex flex-wrap gap-2">
+            {categories.map((cat) => (
+              <span 
+                key={cat}
+                className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+              >
+                {cat}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>

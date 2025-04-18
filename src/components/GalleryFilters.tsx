@@ -1,8 +1,8 @@
 interface GalleryFiltersProps {
   searchTerm: string;
   setSearchTerm: (term: string) => void;
-  selectedCategory: string;
-  setSelectedCategory: (category: string) => void;
+  selectedCategories: string[];
+  setSelectedCategories: (categories: string[] | ((prev: string[]) => string[])) => void;
   categories: string[];
   isFiltersOpen: boolean;
   setIsFiltersOpen: (isOpen: boolean) => void;
@@ -14,8 +14,8 @@ interface GalleryFiltersProps {
 const GalleryFilters = ({
   searchTerm,
   setSearchTerm,
-  selectedCategory,
-  setSelectedCategory,
+  selectedCategories,
+  setSelectedCategories,
   categories,
   isFiltersOpen,
   setIsFiltersOpen,
@@ -23,6 +23,20 @@ const GalleryFilters = ({
   setViewMode,
   showViewToggle = true
 }: GalleryFiltersProps) => {
+  const toggleCategory = (category: string) => {
+    if (category === 'all') {
+      setSelectedCategories([]);
+      return;
+    }
+
+    setSelectedCategories((prev: string[]) => {
+      if (prev.includes(category)) {
+        return prev.filter((c: string) => c !== category);
+      }
+      return [...prev, category];
+    });
+  };
+
   return (
     <div className="bg-white shadow rounded-lg mb-6">
       {/* Top Bar with Toggle Buttons */}
@@ -96,20 +110,34 @@ const GalleryFilters = ({
 
           {/* Category Filter */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Category
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Categories
             </label>
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {categories.map(category => (
-                <option key={category} value={category}>
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </option>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => setSelectedCategories([])}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-colors
+                  ${selectedCategories.length === 0
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+              >
+                All
+              </button>
+              {categories.filter(cat => cat !== 'all').map(category => (
+                <button
+                  key={category}
+                  onClick={() => toggleCategory(category)}
+                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors
+                    ${selectedCategories.includes(category)
+                      ? 'bg-blue-500 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                >
+                  {category}
+                </button>
               ))}
-            </select>
+            </div>
           </div>
         </div>
       </div>

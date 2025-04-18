@@ -1,8 +1,6 @@
-export interface Art {
-  title: string;
-  link: string;
-  description: string;
-  category: string[];
+import { Media } from "./media";
+
+export interface Art extends Media {
 }
 
 export interface ArtData {

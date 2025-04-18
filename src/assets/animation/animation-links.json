@@ -4,25 +4,25 @@
             "title": "Chill Vid 1",
             "link": "https://www.youtube.com/watch?v=KNMbDIKJ6T0&t=5110s&ab_channel=SamandChill",
             "description": "Chill Vid 1 Desc",
-            "category": "zelda"
+            "category": ["zelda", "relaxing"]
         },
         {
             "title": "Chill Vid 2",
             "link": "https://www.youtube.com/watch?v=15bZlN0LrFg&ab_channel=Vapid",
             "description": "Chill Vid 2 Desc",
-            "category": "mix"
+            "category": ["mix", "ambient"]
         },
         {
             "title": "Chill Vid 3",
             "link": "https://www.youtube.com/watch?v=WBLTQYl_dXQ&ab_channel=cosmic",
             "description": "Chill Vid 3 Desc",
-            "category": "mario"
+            "category": ["mario", "gaming"]
         },
         {
             "title": "Chill Vid 4",
             "link": "https://www.youtube.com/watch?v=MZHWfMJ-q8Q&ab_channel=Hero%27sJourney",
             "description": "Chill Vid 4 Desc",
-            "category": "mario"
+            "category": ["mario", "adventure"]
         }   
     ]
 }

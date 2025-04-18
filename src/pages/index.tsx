@@ -4,6 +4,7 @@ import Gallery from "./Gallery"
 import Animation from "./Animation"
 import Art from "./Art"
 import Error from "./Error"
+import Contact from "./Contact"
 export {
     Home,
     About,
@@ -11,4 +12,5 @@ export {
     Animation,
     Art,
     Error,
+    Contact,
 }

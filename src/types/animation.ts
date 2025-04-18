@@ -1,8 +1,7 @@
-export interface Video {
-  title: string;
-  link: string;
-  description: string;
-  category: string;
+import { Media } from "./media";
+
+export interface Video extends Media{
+
 }
 
 export interface AnimationData {
